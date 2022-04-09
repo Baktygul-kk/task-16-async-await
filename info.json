@@ -1,4 +1,4 @@
-const products = [
+[
     {
         "id": 1,
         "title": "Ноутбук Asus TUF Dash F15 FX516PE Intel Core i7-11370H 16GB DDR4 512GB SSD Nvidia RTX3050Ti 4GB FHD DOS серый",
@@ -15,6 +15,14 @@ const products = [
         "desc": "Операционная система Apple iOS 15; экран 6.1 OLED 2532x1170 ~120 Гц; процессор Apple A15 Bionic x6 core; память 6/256 GB; основная камера 12 mpx (F/1.5); фронтальная камера 12 mpx (F/2.2); аккумулятор 3095 mAh; быстрая зарядка 23W; поддержка сетей 5G"
     },
     {
+        "id": 3,
+        "title": "Сотовый телефон Xiaomi Mi 11 Ultra 12/512GB черный",
+        "category": "смартфоны",
+        "price": 79630,
+        "img": "https://web.imd.kg/files/photo/23593.jpg",
+        "desc": "Операционная система Android 11; экран 6.8 AMOLED 3200х1440 ~120 Гц; процессор Qualcomm Snapdragon 888 x8 core; память 12/512 GB; основная камера 50 mpx (F/2,0); фронтальная камера 20 mpx (F/2.2); аккумулятор 5000 mAh; быстрая зарядка 67W; dual sim; поддержка сетей 5G"
+    },
+    {
         "id": 4,
         "title": "Ноутбук Asus TUF Dash F15 FX516PE Intel Core i7-11370H 16GB DDR4 512GB SSD Nvidia RTX3050Ti 4GB FHD DOS серый",
         "category": "ноутбуки",
@@ -28,103 +36,14 @@ const products = [
         "price": 102650,
         "img": "data:image/jpeg;base64,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",
         "desc": "Операционная система Apple iOS 15; экран 6.1 OLED 2532x1170 ~120 Гц; процессор Apple A15 Bionic x6 core; память 6/256 GB; основная камера 12 mpx (F/1.5); фронтальная камера 12 mpx (F/2.2); аккумулятор 3095 mAh; быстрая зарядка 23W; поддержка сетей 5G"
+    },
+    {
+        "id": 6,
+        "title": "Сотовый телефон Xiaomi Mi 11 Ultra 12/512GB черный",
+        "category": "смартфоны",
+        "price": 79630,
+        "img": "https://web.imd.kg/files/photo/23593.jpg",
+        "desc": "Операционная система Android 11; экран 6.8 AMOLED 3200х1440 ~120 Гц; процессор Qualcomm Snapdragon 888 x8 core; память 12/512 GB; основная камера 50 mpx (F/2,0); фронтальная камера 20 mpx (F/2.2); аккумулятор 5000 mAh; быстрая зарядка 67W; dual sim; поддержка сетей 5G"
     }
   
-  ];
-
-
-
-
-window.addEventListener('load', function() {
-    const productsInner = document.querySelector('.products__inner');
-    const filter = document.querySelector('.products__filter');
-
-    displayProdItems(products);
-
-    function displayProdItems(products){
-        let displayProd = products.map(function(item){
-            return `
-                <div class="products__item">
-                    <div class="products__item-img">
-                        <img src="${item.img}" alt="${item.title}">
-                    </div>
-                    <div class="products__item-info">
-                        <h3 class="products__item-name">${item.title}</h3>
-                        <p class="products__item-price">${item.price}</p>
-                        <p class="products__item-desc">${item.desc}</p>
-                        <button class="products__item-btn">Добавить в корзину</button>
-                    </div>
-                </div>
-            `;
-        });
-        displayProd = displayProd.join('');
-        productsInner.innerHTML = displayProd;
-    }
-
-});
-
-function displayFilterBtns(){
-    const categories = products.reduce(function(values, item){
-        if(!values.includes(item.category)){
-            values.push(item.category);
-}
-return values;
-}, ["all"])
-};
-
-
-const categoryBtns = categories.map(function(category){
-
-    return `<button class="products__filter-btn">${category}</button>`;
-}).join('');
-
-filter.innerHTML = categoryBtns;
-const filterBtns = document.querySelectorAll('.products__filter-btn');
-
-filterBtns.forEach(function(btn){
-    btn.addEventListener('click', (e) => {
-        const category = e.currentTarget.dataset.category;
-        const productsInner = products.filter((item)=>{
-            if(item.category === category || category === 'all'){
-                return true;
-            }
-        });
-        if(category === 'all'){
-            displayProdItems(products);
-        } else {    
-            displayProdItems(productsInner);
-        }
-    });
-});
-
-
-
-
-
-
-
-
-
-
-// async function getProducts(){
-//     const response = await fetch('info.json');
-//     const data = await response.json();
-//     return data;
-// }
-
-// getProducts().then((data) => {
-//     data.forEach((prod) => {
-//         const card = document.createElement('div');
-//         card.classList.add('card');
-//         const title = document.createElement('h3');
-//         title.textContent = prod.title;
-//         const content = document.createElement('p');
-//         content.textContent = prod.desc;
-//         card.appendChild(title);
-//         card.appendChild(content);
-//         div.appendChild(card);
-//     });
-//     console.log(data);
-// });
-
-
+  ]
